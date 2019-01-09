@@ -1,0 +1,114 @@
+#main-footer {
+  background-color: $color-bg-light;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-font-medium;
+  }
+  .border-line {
+    background-color: $color-border-light;
+  }
+  section.footer-newsletter-section {
+    padding: 50px 0;
+    .column-icon {
+      i {
+        font-size: 32px;
+        padding: 0 5px 0 0;
+        color: $color-font-light;
+      }
+    }
+    .column-title-text {
+      h3 {
+        margin: 0 0 5px;
+      }
+      p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+    }
+    .column-newsletter-form {
+      .column-input {
+        padding-right: 0;
+        margin-bottom: 0;
+      }
+      .column-submit {
+        padding-left: 0;
+      }
+      .terms {
+        font-size: 12px;
+        color: $color-font-light;
+        a {
+          color: $color-font-light;
+          text-decoration: underline;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+    @include breakpoint(medium down) {
+      .column-newsletter-form {
+        margin-top: 20px;
+      }
+    }
+  }
+  section.footer-columns-section {
+    color: $color-font-light;
+    font-size: 13px;
+    padding: 50px 0;
+    .column-company {
+      .contact-paragraph {
+        margin: 0 0 5px;
+        i.fa {
+          width: 20px;
+        }
+        a {
+          color: $color-font-light;
+          text-decoration: underline;
+        }
+      }
+      p:last-child  {
+        margin-bottom: 0;
+      }
+    }
+    .column-social {
+      .btn-social {
+        float: left;
+        margin: 0 10px 10px 0;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      .column-in {
+        margin: 0 0 10px;
+      }
+    }
+    ul {
+      margin-bottom: 0;
+      li {
+          margin: 0 0 5px;
+        a {
+          color: $color-font-light;
+        }
+      }
+    }
+    @include breakpoint(large down) {
+      .column {
+        margin: 0 0 30px;
+      }
+    }
+  }
+}
+
+section.footer-copyright-section {
+  padding: 14px 0;
+  text-align: center;
+  font-size: 11px;
+  color: $color-font-light;
+  p {
+    margin: 0;
+  }
+  a {
+    color: $color-font-light;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,855 @@
+// fonts
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_ultralight-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_ultralight-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_ultralight_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_ultralight_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_thin-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_thin-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_thin_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_thin_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_light-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_light-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_light_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_light_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_regular-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_regular-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_regular_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_regular_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_medium-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_medium-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_medium_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_medium_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_bold-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_bold-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_bold_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_bold_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_extrabold-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_extrabold-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_extrabold_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_extrabold_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_black-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_black-webfont.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Acherus';
+  src: url('../fonts/acherus_grotesque_-_black_italic-webfont.woff') format('woff'),
+  url('../fonts/acherus_grotesque_-_black_italic-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 900;
+}
+
+// main
+
+body {
+  letter-spacing: -0.2px;
+  -webkit-text-stroke-width: 0.1px;
+}
+
+ul {
+  margin-left: 35px;
+  font-style: italic;
+  &.order_details {
+    margin: 0 0 40px;
+    li {
+      border-bottom: 1px solid #e9e5dd;
+      padding: 5px 0;
+      list-style: none;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+table {
+  border-spacing: 0;
+}
+
+a, button {
+  outline: none;
+}
+
+mark {
+  background-color: $color-bg-pink;
+  color: $color-font-black;
+}
+
+// borders
+
+.border-line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  &.medium {
+    background-color: $color-border-medium;
+  }
+  &.margin {
+    margin: 20px 0;
+  }
+}
+
+// buttons
+
+.btn {
+  display: inline-block;
+  line-height: inherit;
+  cursor: pointer;
+  text-align: center;
+  font-style: normal;
+  box-shadow: none;
+  border: none;
+  font-size: inherit;
+  &.btn-full {
+    width: 100%;
+  }
+  &.btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    font-size: 12px;
+    border-bottom: 3px solid $color-font-light;
+    border-left: 3px solid $color-font-light;
+    color: $color-font-light;
+  }
+  &.btn-hamburger {
+    background-color: #fff;
+    padding: 5px 8px;
+    border-radius: 0;
+    border: 1px solid $color-font-light;
+    span {
+      display: block;
+      width: 22px;
+      height: 3px;
+      background-color: $color-font-light;
+      margin: 4px 0;
+    }
+  }
+  &.btn-social {
+    padding: 7px 10px;
+    border-radius: 3px;
+    font-size: 9px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 85px;
+    height: 29px;
+    border: 1px solid #000;
+    color: #000;
+    i.fa {
+      font-size: 12px;
+      margin: 0 10px 0 0;
+      float: left;
+    }
+    &.btn-two-lines {
+      padding: 2px 15px;
+      min-width: 0;
+      i.fa {
+        font-size: 16px;
+        float: left;
+        margin: 4px 13px 0 0;
+      }
+      span {
+        font-size: 9px;
+        float: right;
+        line-height: 12px;
+        strong {
+          display: block;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &.btn-big {
+    text-decoration: none;
+    padding: 12px 40px;
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    height: 46px;
+    &.smaller {
+      height: 42px;
+      padding: 7px 30px;
+    }
+  }
+  &.btn-add-to-cart {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &.btn-text {
+    border-bottom: 1px solid;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: transparent !important;
+    color: $color-font-orange;
+    i.fa {
+      margin: 0 0 0 5px;
+    }
+    &.btn-brown {
+      color: $color-font-light;
+    }
+  }
+  &.btn-brown {
+    background-color: $color-font-light;
+  }
+  &.btn-orange {
+    background-color: $color-font-orange;
+  }
+  &.a-facebook {
+    color: $color-facebook;
+    border-color: $color-facebook;
+  }
+  &.a-allegro {
+    color: $color-allegro;
+    border-color: $color-allegro;
+  }
+  &.a-pinterest {
+    color: $color-pinterest;
+    border-color: $color-pinterest;
+  }
+  &.a-youtube {
+    color: $color-youtube;
+    border-color: $color-youtube;
+  }
+  &.a-pakamera {
+    color: $color-pakamera;
+    border-color: $color-pakamera;
+  }
+  &.a-etsy {
+    color: $color-etsy;
+    border-color: $color-etsy;
+  }
+  &.a-ebay {
+    color: $color-ebay;
+    border-color: $color-ebay;
+  }
+
+  // custom icons
+
+  .fa.fa-pakamera {
+    width: 12px;
+    height: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .fa.fa-ebay {
+    width: 19px;
+    height: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+// form placeholder
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: $color-font-light;
+}
+
+:-moz-placeholder {
+  opacity: 1;
+  color: $color-font-light;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: $color-font-light;
+}
+
+:-ms-input-placeholder {
+  opacity: 1;
+  color: $color-font-light;
+}
+
+// other classes
+
+.full-height {
+  height: 100%;
+}
+
+a, .btn, div {
+  outline: none;
+}
+
+a, button {
+  letter-spacing: -0.2px;
+}
+
+.row-border {
+  .border-line {
+    background-color: $color-border-medium;
+  }
+}
+
+:focus {
+  outline: none;
+}
+
+// fonts
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: 900;
+  -webkit-text-stroke-width: 0;
+  margin-top: 40px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// forms
+
+form {
+  font-size: 14px;
+}
+
+label {
+  line-height: 30px;
+  display: block;
+  font-size: 14px;
+}
+
+[type="text"], [type="email"], [type="tel"], [type="number"], [type="password"], textarea, select {
+  height: 46px;
+  padding: 14px 12px;
+  border: 1px solid $color-border-medium;
+  line-height: 1.4em;
+  font-size: 13px;
+  font-style: italic;
+  color: $color-font-medium;
+  width: 100%;
+  outline: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  padding: 0 12px;
+}
+
+textarea {
+  height: 120px;
+  display: block;
+}
+
+span.wpcf7-not-valid-tip {
+  margin: 5px 0 0;
+  font-style: italic;
+}
+
+.wpcf7-not-valid {
+  border-color: red;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-response-output {
+  margin: 20px 0 0;
+  padding: 10px;
+  font-size: 14px;
+  font-style: normal;
+  border: 1px solid #5a5853;
+  color: #5a5853;
+  text-align: center;
+}
+
+.column-input {
+  margin-bottom: 20px;
+}
+
+.select2-container--default {
+  .select2-selection--single {
+    height: 46px;
+    line-height: 46px;
+    padding: 14px 12px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    border: 1px solid $color-border-medium;
+    font-size: 13px;
+    outline: none;
+    .select2-selection__rendered {
+      line-height: 16px;
+      color: $color-font-light;
+      font-style: italic;
+      padding: 0;
+    }
+    .select2-selection__arrow {
+      top: 10px;
+      right: 10px;
+    }
+  }
+  .select2-results__option--highlighted[aria-selected], .select2-results__option--highlighted[data-selected] {
+    background-color: $color-font-medium;
+  }
+  .select2-results__option[aria-selected], .select2-results__option[data-selected] {
+    font-size: 13px;
+    padding: 4px 14px;
+  }
+  .select2-search--dropdown {
+    padding: 6px 10px;
+    .select2-search__field {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid $color-border-medium;
+      box-shadow: none;
+    }
+  }
+}
+
+form {
+  section.woocommerce-message-section {
+    margin-top: 0;
+  }
+}
+
+.form-row {
+  margin: 0 0 15px;
+}
+
+// tables
+
+table {
+  padding: 5px 15px;
+  background-color: #f8f7f5;
+  width: 100%;
+  color: #6d6b67;
+  margin: 0 0 30px;
+  table {
+    padding: 0;
+    margin: 0;
+  }
+  tr {
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+    td, th {
+      border-bottom: 1px solid #e9e5e0;
+      padding: 8px 20px;
+      text-align: left;
+      border-right: 1px solid #e9e5e0;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        color: #6d6b67;
+        text-decoration: underline;
+      }
+    }
+  }
+  &.details-table {
+    margin: 0;
+    tr {
+      td, th {
+        text-align: center;
+        &:first-child {
+          font-weight: 800;
+          width: 150px;
+          border-right: 1px solid #e9e5e0;
+          padding-left: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+/* Other */
+
+.woocommerce-password-strength {
+  margin: 5px 0 10px;
+  font-size: 12px;
+  &.short {
+    color: $color-red;
+  }
+  &.bad {
+    color: $color-orange;
+  }
+  &.good {
+    color: $color-yellow;
+  }
+  &.strong {
+    color: $color-green;
+  }
+}
+
+.woocommerce-password-hint {
+  font-style: italic;
+  color: #8c887f;
+  font-size: 12px;
+  line-height: 1.4em;
+  display: inherit;
+}
+
+.notify-label {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  z-index: 1;
+  .label {
+    display: table;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 1px 0 0;
+  }
+  .promo {
+    background-color: #6d6b67;
+  }
+  .new {
+    background-color: #000;
+  }
+}
+
+/* Products */
+
+.small-product {
+  .product-category {
+    color: $color-font-light;
+    font-size: 12px;
+    text-decoration: underline;
+    margin: 0 0 4px;
+    display: block;
+  }
+  .photo {
+    border-top: 1px solid $color-border-light;
+    padding: 5px 0;
+    position: relative;
+    a {
+      width: 100%;
+      display: inline-block;
+      height: 210px;
+      img {
+        max-height: 100%;
+        margin: auto;
+      }
+    }
+  }
+  .info {
+    border-bottom: 1px solid $color-border-light;
+    padding: 0 0 15px;
+    a {
+      h4 {
+        color: $color-font-black;
+        text-transform: none;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+    .details {
+      i {
+        display: block;
+        font-size: 13px;
+        color: $color-font-light;
+      }
+    }
+  }
+  .price-cart {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0 0;
+    .price {
+      color: $color-font-black;
+      font-weight: 900;
+      float: left;
+      font-size: 17px;
+      del {
+        display: block;
+        opacity: 0.4;
+        font-size: 12px;
+        margin: -4px 0 0 0;
+        font-weight: 700;
+        line-height: 1.2em;
+      }
+
+      ins {
+        text-decoration: none;
+      }
+    }
+    .btn-add-to-cart {
+      float: right;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Pagination */
+
+nav.woocommerce-pagination, .blog-pagination {
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  ul {
+    margin: 0;
+    li {
+      display: inline-block;
+      .disabled {
+        display: none;
+      }
+      &.prev.link-nav {
+        float: left;
+      }
+      &.next.link-nav {
+        float: right;
+      }
+    }
+  }
+  .page-numbers {
+    margin: 0 1px;
+    color: #6c6a67;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 14px;
+    padding: 0 5px;
+    a {
+      color: #6c6a67;
+    }
+    &.current {
+      font-weight: 900;
+      text-decoration: none;
+    }
+    &.next {
+      float: right;
+      margin: 0;
+    }
+    &.prev {
+      float: left;
+      margin: 0;
+    }
+  }
+}
+
+.home main#content {
+  margin: 0;
+}
+
+main#content {
+  margin: 60px 0;
+}
+
+.border-title {
+  font-size: 21px;
+  line-height: 45px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #c7bfb1;
+}
+
+.background-box {
+  background-color: #f8f7f5;
+  padding: 15px;
+  table {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+table.order-review-table {
+  font-size: 14px;
+  tbody {
+    tr {
+      &.last-tr {
+        td {
+          height: 10px;
+        }
+      }
+    }
+    tr.product {
+      td {
+        padding: 5px 0;
+      }
+      .thumbnail {
+        width: 80px;
+      }
+      .title-data {
+        padding: 0 0 0 15px;
+        .product-details {
+          margin: 0;
+        }
+        span.product-total {
+          color: #8c887f;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  tfoot {
+    tr {
+      &:first-child {
+        th, td {
+          border-top: 1px solid #c7bfb1;
+        }
+      }
+      &:last-child {
+        th, td {
+          border-bottom: none;
+        }
+      }
+      td {
+        padding: 15px;
+        border-bottom: 1px solid #c7bfb1;
+        ul#shipping_method {
+          margin: 0;
+          li {
+            list-style: none;
+            margin: 0 0 10px;
+            &:last-child {
+              margin: 0;
+            }
+            input {
+              display: inline-block;
+              float: left;
+              margin: 6px 6px 0 0;
+              width: 15px;
+            }
+            label {
+              display: inline-block;
+              max-width: 200px;
+              font-style: normal;
+              font-size: inherit;
+              line-height: inherit;
+            }
+          }
+        }
+      }
+      th {
+        padding: 15px 15px 15px 0;
+        width: 80px;
+        font-weight: normal;
+        border-right: 1px solid #c7bfb1;
+        border-bottom: 1px solid #c7bfb1;
+      }
+      &.order-total {
+        th, td {
+          font-weight: 900;
+          color: #0e0e0e;
+        }
+      }
+    }
+  }
+}
+
+.inner-box {
+  background-color: #F8F7F5;
+  padding: 15px;
+}
+
+fieldset {
+  margin: 20px 0;
+  background-color: $color-bg-light;
+}
+
+em {
+  font-size: 12px;
+  color: $color-font-light;
+}
+
+/* =============================================================================
+Custom Shrink Classes
+========================================================================== */
+
+@each $breakpoint in $breakpoint-classes {
+  @include breakpoint($breakpoint down) {
+    .#{$breakpoint}-shrink {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+  }
+}

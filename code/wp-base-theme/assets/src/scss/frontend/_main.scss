@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+
+
+a[href*="tel"], a[href*="mailto"] {
+  white-space: nowrap;
+}
+
+::-webkit-input-placeholder {
+  color: $font-gray;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: $font-gray;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: $font-gray;
+  opacity: 1;
+}
+:-moz-placeholder {
+  color: $font-gray;
+  opacity: 1;
+}

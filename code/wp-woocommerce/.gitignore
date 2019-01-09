@@ -1,0 +1,6 @@
+/.git
+/.idea
+/assets/dist
+/bower_components
+/node_modules
+config.json

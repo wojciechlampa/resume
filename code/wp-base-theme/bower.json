@@ -1,0 +1,15 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "6.4.x"
+  },
+  "devDependencies": {}
+}

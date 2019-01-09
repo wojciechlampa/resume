@@ -1,0 +1,21 @@
+// foundation files
+
+@import 'components';
+@import 'mixins';
+@import 'settings';
+
+@include normalize;
+@include foundation-global-styles
+@include foundation-grid($row: false, $column: false, $column-row: false, $gutter: false, $push: 'push', $pull: 'pull', $center: false, $uncenter: false, $collapse: false, $uncollapse: false, $offset: false, $end: false, $expanded: false, $block: false);
+@include foundation-typography;
+@include foundation-flex-grid;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+
+// front-end files
+
+@import 'frontend/footer';
+@import 'frontend/header';
+@import 'frontend/main';
+@import 'frontend/sections';
