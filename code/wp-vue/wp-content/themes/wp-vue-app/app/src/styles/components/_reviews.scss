@@ -1,0 +1,32 @@
+.section__reviews {
+  background-color: #f4f4f9;
+  padding: 8rem 0;
+  &_title {
+    margin: 0 0 5rem;
+  }
+}
+
+.component__review {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+  &_rating {
+    color: #ec3756;
+    margin: 0 0 1.5rem;
+  }
+  &_quote {
+    font-size: 1.8rem;
+    color: #2f2f32;
+    margin: 0 0 2rem;
+  }
+  &_author {
+    &_name {
+      color: #2f2f32;
+      font-weight: 900;
+    }
+    &_author {
+      font-size: 1.5rem;
+    }
+  }
+}

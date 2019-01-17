@@ -1,0 +1,46 @@
+button {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+
+  &--normal {
+    font-size: 2.1rem;
+    padding: 0 5rem;
+    border-radius: 15px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+  }
+  &--text {
+    background-color: transparent;
+    font-size: 1.3rem;
+    text-decoration: underline;
+  }
+
+  &--light-blue {
+    background-color: $bg-medium-blue;
+    color: #fff;
+    &:hover, &:focus {
+      background-color: darken($bg-medium-blue, 10);
+      color: #fff;
+    }
+    &.btn--text {
+      color: #8b8dc3;
+      background: transparent;
+    }
+  }
+  &--blue {
+    background-color: $bg-blue;
+    color: #fff;
+    &:hover, &:focus {
+      background-color: darken($bg-blue, 10);
+      color: #fff;
+    }
+  }
+}

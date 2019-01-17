@@ -1,0 +1,134 @@
+.component__contactform {
+  &_cellinput {
+    margin: 0 0 2rem;
+  }
+  &_form {
+    background-color: #f4f4f9;
+    padding: 3rem;
+    border-radius: 15px;
+    font-size: 10px;
+    position: relative;
+    .btn--back {
+      position: absolute;
+      top: 3.7rem;
+    }
+    .btn--normal {
+      margin: 1rem 0 0;
+      width: 100%;
+    }
+    .grid-padding-x {
+      margin: 0 -15px;
+    }
+    &_toplabel {
+      text-align: center;
+      margin: 0 0 3rem;
+      font-size: 1.8em;
+      color: #50506a;
+    }
+    &_secure {
+      font-size: 1.4em;
+      color: #7f7f94;
+      text-align: center;
+      margin: 1.5rem 0 0;
+    }
+    &_first {
+      &_radio {
+        margin: 3rem 0 0 0;
+        background-color: #fff;
+        padding: 3rem 2rem 2rem;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        border: 4px solid #fff;
+        position: relative;
+        font-size: inherit;
+        display: inline-block;
+        transition: all 0.3s ease;
+        &_title {
+          display: block;
+          text-align: center;
+          font-size: 2.1em;
+          font-weight: 900;
+          color: #2f2f32;
+          line-height: 1.4;
+        }
+        &_subtitle {
+          text-align: center;
+          display: block;
+          color: #7f80a1;
+          font-size: 1.4em;
+        }
+        &_input {
+          position: absolute;
+          left: -9999px;
+          &:checked + label {
+            &[for="not-insured"] {
+              border-color: $color-other-red;
+              span:first-child {
+                background-color: $color-other-red;
+              }
+            }
+            &[for="insured"] {
+              border-color: $color-other-green;
+              span:first-child {
+                background-color: $color-other-green;
+              }
+            }
+          }
+        }
+        &_icon {
+          position: absolute;
+          left: 50%;
+          top: -34px;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          line-height: 60px;
+          border-radius: 100%;
+          border: 4px solid #f4f4f9;
+          background-color: #d5d5e7;
+          transition: all 0.3s ease;
+          svg {
+            font-size: 20px;
+            line-height: 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &_title {
+    margin: 0 0 4rem;
+    line-height: 1;
+    &_sub {
+      font-weight: normal;
+      font-size: 2.4rem;
+      color: #75757b;
+    }
+  }
+}
+
+form {
+  input, select {
+    font-size: 1.6em;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 0 2rem;
+    border-radius: 15px;
+    color: $color-blue;
+    height: 60px;
+    transition: all 0.3s ease;
+    &:focus {
+      border: 1px solid $color-blue;
+    }
+    &::placeholder {
+      color: $color-light-blue;
+    }
+  }
+  select {
+    &:focus {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+}
