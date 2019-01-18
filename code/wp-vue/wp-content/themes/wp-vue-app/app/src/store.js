@@ -14,7 +14,8 @@ export const store = new Vuex.Store({
 			steps: {
 				first: true,
 				second: false,
-				third: false
+				third: false,
+				thankyou: false,
 			},
 			insured: '',
 			insuredDetails: false
@@ -60,6 +61,9 @@ export const store = new Vuex.Store({
 		},
 		updateStepThird(state, bool) {
 			state.form.steps.third = bool
+		},
+		updateStepThankyou(state, bool) {
+			state.form.steps.thankyou = bool
 		}
 	},
 	actions: {
@@ -88,6 +92,9 @@ export const store = new Vuex.Store({
 		},
 		switchStepThird({commit}, bool) {
 			commit('updateStepThird', bool);
+		},
+		switchStepThankyou({commit}, bool) {
+			commit('updateStepThankyou', bool);
 		}
 	}
 });

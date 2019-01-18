@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VeeValidate from 'vee-validate'
+import VueMask from 'v-mask'
 import App from './layouts/Main'
 import { store } from './store'
 import './filters'
@@ -9,6 +11,9 @@ import { faLock, faTimes, faCheck, faStar, faAngleRight, faAngleLeft } from '@fo
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faLock, faTimes, faCheck, faStar, faAngleRight, faAngleLeft);
+
+Vue.use(VeeValidate);
+Vue.use(VueMask);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

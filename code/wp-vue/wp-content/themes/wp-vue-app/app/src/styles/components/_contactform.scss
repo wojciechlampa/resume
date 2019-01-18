@@ -1,4 +1,25 @@
 .component__contactform {
+  &_inputerror {
+    &--box {
+      background-color: $color-red;
+      display: block;
+      margin: -10px 0 0;
+      padding: 18px 20px 8px;
+      color: #fff;
+      border-radius: 0 0 15px 15px;
+      font-size: 11px;
+    }
+    &--inline {
+      background-color: $color-red;
+      display: block;
+      margin: 0 0 10px;
+      padding: 8px 20px;
+      color: #fff;
+      border-radius: 15px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
   &_cellinput {
     margin: 0 0 2rem;
   }
@@ -125,10 +146,11 @@ form {
     &::placeholder {
       color: $color-light-blue;
     }
-  }
-  select {
-    &:focus {
-      border-radius: 15px 15px 0 0;
+    &:-internal-autofill-selected {
+      box-shadow: 0 0 0 100px inset #fff;
+    }
+    &.error {
+      border: 1px solid $color-red;
     }
   }
 }

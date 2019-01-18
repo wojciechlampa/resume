@@ -6,8 +6,8 @@
         <div class="grid-container full">
             <div class="grid-x grid-padding-x">
                 <div class="cell small-12 medium-6 component__contactform_cellinput">
-                    <input class="component__contactform_form_first_radio_input" type="radio" name="insurance-type"
-                           id="not-insured" v-bind:value="false" v-model="form.insured">
+                    <input class="component__contactform_form_first_radio_input" type="radio" name="insurance-type" data-vv-as="insurance type"
+                           id="not-insured" v-bind:value="false" v-model="form.insured" v-validate="'required'">
                     <label class="component__contactform_form_first_radio component__contactform_form_first_radio--notinsured"
                            for="not-insured">
                         <span class="component__contactform_form_first_radio_icon">
@@ -18,8 +18,8 @@
                     </label>
                 </div>
                 <div class="cell small-12 medium-6 component__contactform_cellinput">
-                    <input class="component__contactform_form_first_radio_input" type="radio" name="insurance-type"
-                           id="insured" v-bind:value="true" v-model="form.insured">
+                    <input class="component__contactform_form_first_radio_input" type="radio" name="insurance-type" data-vv-as="insurance type"
+                           id="insured" v-bind:value="true" v-model="form.insured" v-validate="'required'">
                     <label class="component__contactform_form_first_radio component__contactform_form_first_radio--insured"
                            for="insured">
                         <span class="component__contactform_form_first_radio_icon">
@@ -30,8 +30,9 @@
                     </label>
                 </div>
             </div>
+            <span v-show="errors.has('insurance-type')" class="component__contactform_inputerror component__contactform_inputerror--inline">{{ errors.first('insurance-type') }}</span>
         </div>
-        <button class="component__contactform_form_first_next btn btn--normal btn--light-blue" type="button" v-on:click="goNext">Get
+        <button class="component__contactform_form_first_next btn btn--normal btn--light-blue" type="button" v-on:click="goNext" :disabled="errors.any()">Get
             started
         </button>
     </div>
@@ -44,8 +45,12 @@
 		name: 'component-contactformfirst',
 		methods: {
 			goNext: function () {
-				this.$store.dispatch('switchStepFirst', false);
-				this.$store.dispatch('switchStepSecond', true);
+				this.$validator.validateAll().then((result) => {
+					if (result) {
+						this.$store.dispatch('switchStepFirst', false);
+						this.$store.dispatch('switchStepSecond', true);
+					}
+				});
 			}
 		},
         computed: {

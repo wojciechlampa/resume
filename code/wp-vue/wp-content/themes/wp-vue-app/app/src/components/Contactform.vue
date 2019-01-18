@@ -6,7 +6,7 @@
                 and an agent will contact you.
             </span>
         </h2>
-        <form class="component__contactform_form" action="" v-on:submit.prevent="sendForm">
+        <form class="component__contactform_form" id="component__contactform_form" action="" v-on:submit.prevent="sendForm">
             <template v-if="form.steps.first">
                 <component-contactformfirst></component-contactformfirst>
             </template>
@@ -15,6 +15,9 @@
             </template>
             <template v-if="form.steps.third">
                 <component-contactformthird></component-contactformthird>
+            </template>
+            <template v-if="form.steps.thankyou">
+                <component-contactformthankyou></component-contactformthankyou>
             </template>
             <div class="component__contactform_form_secure">
                 <font-awesome-icon icon="lock"/>
@@ -29,6 +32,7 @@
 	import ComponentContactformfirst from "./ContactformFirst";
 	import ComponentContactformsecond from "./ContactformSecond";
 	import ComponentContactformthird from "./ContactformThird";
+	import ComponentContactformthankyou from "./ContactformThankyou";
 	import {mapState} from 'vuex'
 
 	export default {
@@ -38,12 +42,12 @@
 		methods: {
 			sendForm: function () {
 				let formData = new FormData();
-				let formUrl = '/wp-json/contact-form-7/v1/contact-forms/11/feedback';
+				let formUrl = '/wp-json/contact-form-7/v1/contact-forms/5/feedback';
 
-				formData.set('_wpcf7', 11);
+				formData.set('_wpcf7', 5);
 				formData.set('_wpcf7_version', '5.0.2');
 				formData.set('_wpcf7_locale', 'en_US');
-				formData.set('_wpcf7_unit_tag', 'wpcf7-f11-o1');
+				formData.set('_wpcf7_unit_tag', 'wpcf7-f5-o1');
 				formData.set('_wpcf7_container_post', 0);
 				formData.set('first-name', this.formBody.firstName);
 				formData.set('last-name', this.formBody.lastName);
@@ -67,9 +71,11 @@
 						}
 					}
 				})
-					.then(function (response) {
+                    .then( (response) => {
 						console.log(response);
-					})
+						this.$store.dispatch('switchStepThird', false);
+						this.$store.dispatch('switchStepThankyou', true);
+                    } )
 					.catch(function (error) {
 						console.log(error);
 					});
@@ -79,7 +85,8 @@
 		components: {
 			ComponentContactformthird,
 			ComponentContactformsecond,
-			ComponentContactformfirst
+			ComponentContactformfirst,
+			ComponentContactformthankyou
 		},
 		computed: {
 			...mapState([
