@@ -8,8 +8,8 @@ export const store = new Vuex.Store({
 	state: {
 		islands: [],
 		currentPhoneNumber: '',
-		currentLocation: '',
-		defaultLocation: '',
+		currentLocation: 'hawaii',
+		defaultLocation: 'hawaii',
 		form: {
 			steps: {
 				first: true,
@@ -18,11 +18,11 @@ export const store = new Vuex.Store({
 				thankyou: false,
 			},
 			insured: '',
-			insuredDetails: false
+			insuredDetails: false,
+			sendStatus: ''
 		},
 		formBody: {
-			firstName : '',
-			lastName : '',
+			name : '',
 			address : '',
 			phone : '',
 			email : '',
@@ -32,7 +32,9 @@ export const store = new Vuex.Store({
 			propertyType : '',
 			constructionClass : '',
 			foundationType : ''
-		}
+		},
+		posts: {},
+		reviews: {}
 	},
 	mutations: {
 		updateDefaultLocation(state, islands) {
@@ -64,6 +66,15 @@ export const store = new Vuex.Store({
 		},
 		updateStepThankyou(state, bool) {
 			state.form.steps.thankyou = bool
+		},
+		updateFormStatus(state, bool) {
+			state.form.sendStatus = bool
+		},
+		updatePosts(state, posts) {
+			state.posts = posts
+		},
+		updateReviews(state, reviews) {
+			state.reviews = reviews
 		}
 	},
 	actions: {
@@ -95,6 +106,15 @@ export const store = new Vuex.Store({
 		},
 		switchStepThankyou({commit}, bool) {
 			commit('updateStepThankyou', bool);
+		},
+		switchFormStatus({commit}, bool) {
+			commit('updateFormStatus', bool);
+		},
+		pushPosts({commit}, posts) {
+			commit('updatePosts', posts);
+		},
+		pushReviews({commit}, reviews) {
+			commit('updateReviews', reviews);
 		}
 	}
 });

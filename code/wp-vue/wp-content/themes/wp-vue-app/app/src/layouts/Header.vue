@@ -3,10 +3,10 @@
         <div class="grid-container">
             <div class="grid-x">
                 <div class="cell auto header__celllogo align-self-middle">
-                    <a class="header__logo" href="">
+                    <router-link to="/" class="header__logo">
                         <img class="header__logo_img" src="/wp-content/themes/gc-starter/app/src/assets/logo.svg"
                              alt="">
-                    </a>
+                    </router-link>
                 </div>
                 <div class="cell small-12 medium-5 header__cellcall">
                     <div class="header__call">

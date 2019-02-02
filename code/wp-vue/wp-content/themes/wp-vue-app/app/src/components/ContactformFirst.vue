@@ -1,7 +1,7 @@
 <template>
     <div class="component__contactform_form_first">
         <div class="component__contactform_form_toplabel">
-            Select one of below options:
+            <strong>Do you currently have Hurricane insurance?</strong>
         </div>
         <div class="grid-container full">
             <div class="grid-x grid-padding-x">
@@ -13,8 +13,8 @@
                         <span class="component__contactform_form_first_radio_icon">
                                 <font-awesome-icon icon="times"/>
                             </span>
-                        <span class="component__contactform_form_first_radio_title">Not Insured</span>
-                        <span class="component__contactform_form_first_radio_subtitle">Need Coverage</span>
+                        <span class="component__contactform_form_first_radio_title">No</span>
+                        <span class="component__contactform_form_first_radio_subtitle">I Need Coverage</span>
                     </label>
                 </div>
                 <div class="cell small-12 medium-6 component__contactform_cellinput">
@@ -25,14 +25,14 @@
                         <span class="component__contactform_form_first_radio_icon">
                                 <font-awesome-icon icon="check"/>
                             </span>
-                        <span class="component__contactform_form_first_radio_title">Insured</span>
-                        <span class="component__contactform_form_first_radio_subtitle">Need Savings</span>
+                        <span class="component__contactform_form_first_radio_title">Yes</span>
+                        <span class="component__contactform_form_first_radio_subtitle">But I Need Savings</span>
                     </label>
                 </div>
             </div>
             <span v-show="errors.has('insurance-type')" class="component__contactform_inputerror component__contactform_inputerror--inline">{{ errors.first('insurance-type') }}</span>
         </div>
-        <button class="component__contactform_form_first_next btn btn--normal btn--light-blue" type="button" v-on:click="goNext" :disabled="errors.any()">Get
+        <button class="component__contactform_form_first_next btn btn--normal btn--light-blue" type="button" v-on:click="goNext" :disabled="errors.any()" v-if="form.insured !== ''">Get
             started
         </button>
     </div>

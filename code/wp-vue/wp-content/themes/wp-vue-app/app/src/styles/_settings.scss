@@ -70,6 +70,7 @@ $font-raleway: 'Raleway', sans-serif;
 $font-awesome: 'FontAwesome';
 
 $color-black: #2f2f32;
+$color-medium-black: #4c4c4f;
 $color-gray: #75757b;
 $color-light-gray: #8b8b94;
 $color-red: #ec3756;
@@ -78,7 +79,7 @@ $color-light-blue: #7f80a1;
 $color-very-light-blue: #afb0ca;
 
 $color-other-red: #ec3756;
-$color-other-green: #69ca4e;
+$color-other-green: #17e3a8;
 
 $bg-very-light-blue: #f4f4f9;
 $bg-light-blue: #d5d5e7;
@@ -104,7 +105,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: $color-gray;
+$body-font-color: $color-black;
 $body-font-family: $font-raleway;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -158,8 +159,8 @@ $header-font-weight: 900;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $color-black;
-$header-lineheight: 1.2;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.4;
+$header-margin-bottom: 4rem;
 $header-styles: (
         small: (
                 'h1': ('font-size': 24),

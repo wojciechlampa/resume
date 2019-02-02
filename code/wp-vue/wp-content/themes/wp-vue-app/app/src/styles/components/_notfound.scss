@@ -1,0 +1,21 @@
+.page__notfound {
+  padding: 8rem 0;
+  &_title {
+    margin-top: 0;
+    line-height: 1.2;
+    span {
+      display: block;
+      font-size: 7.2rem;
+      color: $color-red;
+    }
+  }
+  &_text {
+    margin: 0 0 4rem;
+  }
+  &_cellmascot {
+    svg {
+      width: 306px;
+      height: 500px;
+    }
+  }
+}

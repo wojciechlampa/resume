@@ -7,9 +7,6 @@
                 Go back
             </button>
         </div>
-        <div class="component__contactform_form_toplabel">
-            Fill up fields below:
-        </div>
         <template v-if="!form.insuredDetails && form.insured">
             <component-contactformsecondinfields></component-contactformsecondinfields>
         </template>

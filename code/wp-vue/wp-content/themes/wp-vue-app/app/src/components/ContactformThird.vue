@@ -8,25 +8,29 @@
             </button>
         </div>
         <div class="component__contactform_form_toplabel">
-            Fill up fields below:
+            Fill in property information below:
         </div>
         <div class="grid-x">
             <div class="grid-x grid-padding-x">
                 <div class="cell small-12 component__contactform_cellinput">
+                    <label for="year-built">Year built</label>
                     <input
                             type="text"
+                            id="year-built"
                             name="year-built"
                             title="Year built"
-                            placeholder="Year built"
+                            placeholder="If you don't know, just leave it blank"
                             v-model="formBody.yearBuilt"
-                            v-validate="'required|min_value:1700|max:4'"
+                            v-validate="'min_value:1700|max:4'"
                             data-vv-as="year built"
                             :class="{ 'error': errors.has('year-built') }"
                     >
                     <span v-show="errors.has('year-built')" class="component__contactform_inputerror component__contactform_inputerror--box">{{ errors.first('year-built') }}</span>
                 </div>
                 <div class="cell small-12 component__contactform_cellinput">
+                    <label for="property-type">Property type <span>*</span></label>
                     <select
+                            id="property-type"
                             name="property-type"
                             title="Property type"
                             v-model="formBody.propertyType"
@@ -34,7 +38,6 @@
                             data-vv-as="property type"
                             :class="{ 'error': errors.has('property-type') }"
                     >
-                        <option value="" disabled selected>Property type</option>
                         <option value="House">House</option>
                         <option value="Condo">Condo</option>
                         <option value="Apartment">Apartment</option>
@@ -42,7 +45,9 @@
                     <span v-show="errors.has('property-type')" class="component__contactform_inputerror component__contactform_inputerror--box">{{ errors.first('property-type') }}</span>
                 </div>
                 <div class="cell small-12 component__contactform_cellinput">
+                    <label for="construction-class">Construction class <span>*</span></label>
                     <select
+                            id="construction-class"
                             name="construction-class"
                             title="Construction class"
                             v-model="formBody.constructionClass"
@@ -50,7 +55,6 @@
                             data-vv-as="construction class"
                             :class="{ 'error': errors.has('construction-class') }"
                     >
-                        <option value="" disabled selected>Construction class</option>
                         <option value="Standard frame single wall">Standard frame single wall</option>
                         <option value="Standard frame double wall">Standard frame double wall</option>
                         <option value="Superior frame">Superior frame</option>
@@ -58,11 +62,14 @@
                         <option value="Semi wind resistive">Semi wind resistive</option>
                         <option value="Wind resistive">Wind resistive</option>
                         <option value="Superior wind resistive">Superior wind resistive</option>
+                        <option value="Unknown">Unknown</option>
                     </select>
                     <span v-show="errors.has('construction-class')" class="component__contactform_inputerror component__contactform_inputerror--box">{{ errors.first('construction-class') }}</span>
                 </div>
                 <div class="cell small-12 component__contactform_cellinput">
+                    <label for="construction-class">Foundation type <span>*</span></label>
                     <select
+                            id="foundation-type"
                             name="foundation-type"
                             title="Foundation type"
                             v-model="formBody.foundationType"
@@ -70,7 +77,6 @@
                             data-vv-as="foundation type"
                             :class="{ 'error': errors.has('foundation-type') }"
                     >
-                        <option value="" disabled selected>Foundation type</option>
                         <option value="Basement">Basement</option>
                         <option value="Shallow basement">Shallow basement</option>
                         <option value="Concrete slab">Concrete slab</option>
@@ -113,6 +119,7 @@
 		},
         computed: {
             ...mapState([
+            	'form',
             	'formBody'
             ])
         }

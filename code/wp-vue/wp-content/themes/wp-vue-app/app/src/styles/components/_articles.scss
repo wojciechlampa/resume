@@ -1,7 +1,8 @@
-.section__articles {
+.section__articles, .page__articles {
   padding: 8rem 0;
   &_title {
     margin: 0 0 5rem;
+    font-weight: normal;
   }
   &_button {
     margin: 2rem 0 0;

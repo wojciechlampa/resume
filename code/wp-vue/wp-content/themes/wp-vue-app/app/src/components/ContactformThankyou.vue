@@ -1,6 +1,6 @@
 <template>
-    <div class="component__contactform_form_thankyou">
-        <h4 class="text-center">Your message has been sent!</h4>
+    <div class="component__contactform_thankyou">
+        <h4 class="component__contactform_thankyou_title text-center">Your message has been sent!</h4>
     </div>
 </template>
 

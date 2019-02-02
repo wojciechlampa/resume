@@ -3,6 +3,7 @@
   padding: 8rem 0;
   &_title {
     margin: 0 0 5rem;
+    font-weight: normal;
   }
 }
 
@@ -11,6 +12,7 @@
   border-radius: 15px;
   padding: 3rem;
   text-align: center;
+  height: 100%;
   &_rating {
     color: #ec3756;
     margin: 0 0 1.5rem;
