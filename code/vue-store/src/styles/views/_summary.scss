@@ -1,0 +1,40 @@
+.page__summary {
+  margin: 4rem 0;
+  &_title {
+    margin: 0 0 4rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  &_text {
+    text-align: center;
+  }
+  table {
+    border-spacing: 0;
+    width: 100%;
+    tbody {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+        td {
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          padding: 1rem;
+          &:first-child {
+            width: 30%;
+            padding-left: 0;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    margin: 2rem 0;
+  }
+}

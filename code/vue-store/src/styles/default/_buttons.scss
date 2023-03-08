@@ -1,0 +1,54 @@
+a:hover, a:focus {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  &--small {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-block;
+    span {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+  &--normal {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: inline-block;
+    border: none;
+    -webkit-appearance: none;
+    span {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  &--icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+
+  &--white, &--white:hover, &--white:focus {
+    background-color: #fff;
+    color: #000;
+  }
+  &--gray, &--gray:hover, &--gray:focus {
+    background-color: #999;
+    color: #fff;
+  }
+  &--black, &--black:hover, &--black:focus {
+    background-color: #000;
+    color: #fff;
+  }
+}

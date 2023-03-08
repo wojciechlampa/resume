@@ -1,0 +1,157 @@
+// variables
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
+
+$font-roboto-mono: 'Roboto Mono', sans-serif;
+
+$background-color-900-gray: #21212a;
+$background-color-800-gray: #282834;
+$background-color-700-gray: #373744;
+$background-color-500-gray: #88889f;
+$background-color-400-gray: #cbcdd7;
+$background-color-300-gray: #e8e9ed;
+
+$color-green: #07c749;
+$color-purple: #7700ff;
+$color-pink: #c71074;
+
+$font-color-900-gray: #21212a;
+$font-color-700-gray: #373744;
+$font-color-500-gray: #8e919e;
+$font-color-white: #efefef;
+
+
+// styles
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-roboto-mono;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+table {
+  border-spacing: 0;
+}
+
+.day {
+  &.game {
+    background-color: $background-color-300-gray;
+    color: $font-color-700-gray;
+    input {
+      background-color: $background-color-400-gray;
+      color: $font-color-900-gray;
+    }
+  }
+  .game__box {
+    background-color: $background-color-400-gray;
+    tr {
+      td {
+        background-color: $background-color-300-gray;
+        &[cellvalue="1"] {
+          background-color: $background-color-700-gray;
+        }
+      }
+    }
+  }
+}
+
+.game {
+  font-size: 14px;
+  padding: 10px;
+  background-color: $background-color-800-gray;
+  color: $font-color-white;
+  min-height: 100%;
+  label {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 12px;
+  }
+  button, input {
+    height: 30px;
+    padding: 0 8px;
+    border: none;
+    display: inline-block;
+    font-family: $font-roboto-mono;
+  }
+  input {
+    width: 60px;
+    background-color: $background-color-700-gray;
+    color: #fff;
+    border-radius: 8px;
+  }
+  button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+  &__box {
+    border-spacing: 1px;
+    font-size: 10px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(20, 20, 52, 0.3);
+    background-color: $background-color-700-gray;
+    tr {
+      td {
+        background-color: $background-color-800-gray;
+        padding: 0;
+        &:hover {
+          background-color: $background-color-400-gray;
+          opacity: 0.7;
+        }
+        &[cellvalue="1"] {
+          background-color: $background-color-400-gray;
+        }
+      }
+    }
+  }
+  &__mode, &__settings, &__controls, &__stats, &__actions {
+    margin: 20px auto;
+    text-align: center;
+    tr {
+      td {
+        padding: 0 10px;
+      }
+    }
+  }
+  &__stats {
+    tr {
+      td {
+        span {
+          font-size: 10px;
+          color: $font-color-500-gray;
+        }
+      }
+    }
+  }
+  &__mode {
+    button {
+      background-color: $color-purple;
+    }
+  }
+  &__controls {
+    button {
+      background-color: $color-green;
+    }
+  }
+  &__actions {
+    button {
+      background-color: $color-pink;
+    }
+    input {
+      margin: 0 0 0 10px;
+    }
+  }
+}

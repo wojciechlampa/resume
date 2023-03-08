@@ -1,0 +1,19 @@
+.layout__footer {
+  background-color: #eee;
+  padding: 2rem 0;
+  font-size: 10px;
+  &_top {
+    .component__nav {
+      padding: 0;
+      font-size: inherit;
+      a {
+        font-size: 1.4em;
+        color: #999;
+        line-height: 1.6;
+      }
+    }
+  }
+  &_middle {
+    margin: 2em 0;
+  }
+}

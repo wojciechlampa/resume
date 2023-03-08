@@ -1,0 +1,17 @@
+@import "~foundation-sites/scss/foundation";
+
+@include foundation-normalize;
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-prototype-spacing;
+@include foundation-prototype-classes;
+
+@import "default/buttons";
+@import "default/forms";
+@import "default/lists";
+@import "default/main";
+@import "default/typography";

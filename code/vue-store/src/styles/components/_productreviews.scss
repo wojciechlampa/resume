@@ -1,0 +1,33 @@
+.component__product_reviews {
+  margin: 3rem 0 0;
+  font-size: 10px;
+  background-color: #eee;
+  padding: 2em;
+  &_title {
+    margin-top: 0;
+  }
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+      margin: 0 0 2em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &_notify {
+    font-size: 1.6em;
+  }
+  &_author {
+    font-family: $font-playfair;
+    font-size: 1.8em;
+  }
+  &_text {
+    font-size: 1.4em;
+  }
+
+  @include breakpoint(medium down) {
+    margin-top: 4rem;
+  }
+}

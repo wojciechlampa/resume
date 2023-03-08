@@ -1,0 +1,13 @@
+.page__shop {
+  margin: 8rem 0;
+  .component__productsmall {
+    margin-bottom: 4rem;
+  }
+  .reduce-margin {
+    margin-top: -4rem;
+  }
+
+  @include breakpoint(medium down) {
+    margin: 4rem 0;
+  }
+}

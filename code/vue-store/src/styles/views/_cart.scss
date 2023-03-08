@@ -1,0 +1,12 @@
+.page__cart {
+  margin: 4rem 0;
+  &_title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 4rem 0;
+  }
+
+  @include breakpoint(medium down) {
+    margin: 2rem 0;
+  }
+}

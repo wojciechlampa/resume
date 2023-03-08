@@ -1,0 +1,57 @@
+.component__checkoutsummary {
+  background-color: #eee;
+  font-size: 10px;
+  padding: 2em;
+  &_title {
+    font-family: $font-playfair;
+    font-size: 2em;
+    color: #000;
+    margin: 0 0 1em;
+  }
+  &_label {
+    font-size: 1.2em;
+    color: #999;
+  }
+  &_products {
+    table {
+      width: 100%;
+      border-spacing: 0;
+      margin: 0 0 1em;
+      tr {
+        td:last-child {
+          text-align: right;
+          font-weight: 700;
+        }
+      }
+    }
+    &_single {
+      font-size: 1.4em;
+    }
+  }
+  &_shipping {
+    font-size: 1.4em;
+    margin: 0 0 1em;
+    padding: 0 0 1em;
+    border-bottom: 1px solid #000;
+  }
+  &_total {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0 0 2em;
+  }
+  &_subtotal {
+    font-size: 1.6em;
+    margin: 0 0 0.5em;
+  }
+  ul {
+    margin: -1em 0 2em;
+    li {
+      list-style: none;
+      margin: 0 0 0.5em;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    margin: 0 0 4rem 0;
+  }
+}

@@ -1,0 +1,98 @@
+.component__minicart {
+  font-size: 10px;
+  margin: 0 0 0 0.5em;
+  &_button {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    font-size: 1.6em;
+    span {
+      font-size: 9px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      background-color: #999;
+      color: #fff;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      border-radius: 100%;
+    }
+  }
+  &_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display: block;
+    z-index: 2;
+    opacity: 0.2;
+  }
+  &_box {
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 35rem;
+    padding: 3rem;
+    &_title {
+      font-family: $font-playfair;
+      font-size: 2em;
+    }
+    &_message {
+      margin: 2em 0;
+      font-size: 1.4em;
+    }
+    &_products {
+      margin: 2em 0;
+      ul {
+        margin: 0;
+      }
+      &_single {
+        list-style: none;
+        margin: 0 0 1em 0;
+        padding: 0 0 1em 0;
+        border-bottom: 1px solid #eee;
+        &_image {
+          width: 70px;
+        }
+        &_title {
+          font-size: 1.6em;
+          font-weight: 700;
+        }
+        &_price {
+          font-size: 1.4em;
+          color: #999;
+          span {
+            margin: 0 0.5em 0 0;
+            &:last-child {
+              font-weight: 700;
+              margin: 0;
+            }
+          }
+        }
+        &_quantity {
+          font-size: 1.4em;
+        }
+      }
+    }
+    &_summary {
+      margin: 0 0 2em;
+      font-size: 1.4em;
+      &_amount {
+        font-weight: 700;
+      }
+    }
+    &_actions {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

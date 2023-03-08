@@ -1,0 +1,19 @@
+.component__product_details {
+  font-size: 10px;
+  &_series {
+    font-size: 1.4em;
+  }
+  &_title {
+    margin: 0;
+    font-size: 3em;
+  }
+  &_price {
+    margin: 0.5em 0 1em;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  &_descripion {
+    margin: 0 0 1em;
+    font-size: 1.4em;
+  }
+}

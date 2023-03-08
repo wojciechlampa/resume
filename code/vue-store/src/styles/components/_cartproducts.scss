@@ -1,0 +1,42 @@
+.component__cartproducts {
+  font-size: 10px;
+  overflow-x: auto;
+  table {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    border-spacing: 0;
+    tr {
+      th {
+        padding: 1em 0.5em;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+      td {
+        text-align: center;
+        padding: 1em 0.5em;
+        font-size: 1.4em;
+        &:first-child {
+          padding: 1em 0;
+        }
+      }
+    }
+  }
+  &_single {
+    &_remove {
+      padding: 1em;
+    }
+    &_image {
+      max-width: 70px;
+    }
+    &_total {
+      font-weight: 700;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,17 @@
+.component__nav {
+  padding: 0 1em;
+  font-size: 10px;
+  a {
+    font-size: 1.6em;
+    padding: 0.5em;
+    margin: 0 1em 0 0;
+    color: #000;
+    line-height: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.router-link-active {
+      font-weight: 700;
+    }
+  }
+}

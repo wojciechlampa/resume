@@ -1,0 +1,10 @@
+.page__about {
+  margin: 8rem 0;
+  .section__description {
+    margin: 0;
+  }
+
+  @include breakpoint(medium down) {
+    margin: 4rem 0;
+  }
+}

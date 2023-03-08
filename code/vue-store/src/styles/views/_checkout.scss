@@ -1,0 +1,12 @@
+.page__checkout {
+  margin: 4rem 0;
+  &_title {
+    margin: 0 0 4rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  @include breakpoint(medium down) {
+    margin: 2rem 0;
+  }
+}

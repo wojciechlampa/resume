@@ -1,0 +1,49 @@
+.section__categories {
+  margin: 8rem 0;
+  &_box {
+    position: relative;
+    height: 25rem;
+    margin: 2rem 0;
+    &:hover {
+      .section__categories_box_image {
+        object-position: 85% 0;
+      }
+    }
+    &_image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 80% 0;
+      transition: all 1s linear;
+      position: absolute;
+      z-index: 0;
+    }
+    &_text {
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      background-color: #fff;
+      width: 20em;
+      font-size: 10px;
+      text-align: center;
+      padding: 1em;
+      &_label {
+        display: inline-block;
+        border-bottom: 1px solid;
+        color: #999;
+        font-size: 1.2em;
+      }
+      &_name {
+        font-family: $font-playfair;
+        font-size: 3em;
+        line-height: 1.4;
+        color: #000;
+      }
+      &_count {
+        font-size: 1em;
+        color: #999;
+      }
+    }
+  }
+}
+

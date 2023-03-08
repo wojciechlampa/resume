@@ -1,0 +1,11 @@
+.component__social {
+  margin: 0;
+  li {
+    display: inline-block;
+    margin: 0 1em;
+    svg {
+      font-size: 1.4em;
+      color: #999;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.aside__sidebar {
+  background-color: #eee;
+  padding: 2rem;
+  font-size: 10px;
+  &_title {
+    margin: 0 0 1rem;
+    font-size: 1.8em;
+    color: #000;
+  }
+
+  @include breakpoint(medium down) {
+    margin-bottom: 4rem;
+  }
+}

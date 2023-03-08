@@ -1,0 +1,7 @@
+.page__product {
+  margin: 8rem 0;
+
+  @include breakpoint(medium down) {
+    margin: 4rem 0;
+  }
+}

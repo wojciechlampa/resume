@@ -1,0 +1,29 @@
+.component__carttotals {
+  background-color: #eee;
+  padding: 2em;
+  font-size: 10px;
+  &_title {
+    font-family: $font-playfair;
+    font-size: 2em;
+    margin: 0 0 1em;
+  }
+  &_subtotal {
+    font-size: 1.6em;
+    margin: 0 0 0.5em;
+  }
+  &_label {
+    font-size: 1.2em;
+    color: #999;
+  }
+  &_shipping {
+    font-size: 1.4em;
+    margin: 0 0 1em;
+    border-bottom: 1px solid #999;
+    padding: 0 0 1em 0;
+  }
+  &_total {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0 0 2em;
+  }
+}

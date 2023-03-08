@@ -1,0 +1,12 @@
+.component__checkoutbillings {
+  margin: 0 0 2em;
+  font-size: 10px;
+  &_title {
+    margin-top: 0;
+  }
+  &_second {
+    background-color: #eee;
+    padding: 2rem;
+    margin: 2rem 0 3rem;
+  }
+}

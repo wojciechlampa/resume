@@ -1,0 +1,45 @@
+.component__productsmall {
+  font-size: 10px;
+  text-align: center;
+  max-width: 20rem;
+  margin: 2rem auto;
+  &:hover {
+    .component__productsmall_buttons {
+      opacity: 1;
+    }
+  }
+  &_image {
+    height: 20rem;
+    object-fit: cover;
+    padding: 1rem;
+    border: 1px solid #eee;
+    transition: all 0.5s ease;
+  }
+  &_name {
+    font-size: 1.4em;
+    margin: 1em 0 0 0;
+    color: #000;
+    font-weight: 700;
+  }
+  &_price {
+    font-size: 1.4em;
+  }
+  &_buttons {
+    height: 32px;
+    margin: -32px 0 0 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  .btn--addtocart {
+    width: 100%;
+    // btn--small recopy
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-block;
+    span {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.section__catalog {
+  @include breakpoint(medium up) {
+    margin: -2rem 0;
+  }
+}
